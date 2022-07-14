@@ -1,0 +1,40 @@
+tlb stuff
+
+RAM ADDRESS RANGE IN GENESIS IS :
+0x00e0_0000 to 0x00e0_ffff
+
+that maps to
+&m68k_ram[0], &m68k_ram[0]+0xffff 
+
+so first init/clear tlb
+mtc0 $0,$2 # entry lo
+mtc0 $0,$3 # entry hi
+mtc0 $0,$5 # pagemask
+# 0 for 4kb
+# 0xf for 64kb (1111)
+mtc0 $0,$6 # wired
+mtc0 $0,$10 # entryhi
+
+addiu $11,$0,31
+clear_tlb_loop:
+mtc0 $11, $0
+nop
+nop
+nop
+nop
+nop
+tlbwi
+bne $11, $0, clear_tlb_loop
+addi $11,-1
+
+
+if we are using 64kb pages
+
+that means that we need to use
+16 bits for page offset
+
+32-16 = 16 bits for page frame number
+top 16 bits
+
+((address >> 16) & 0x0000FFFF) is page frame number
+

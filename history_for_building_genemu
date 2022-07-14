@@ -1,0 +1,500 @@
+  516  ./usb64-load-game.bat
+  517  make
+  518  ./usb64-load-game.bat
+  519  ./usb64-load-game.bat
+  520  mips64-elf-objdump.exe -D obj/rsp.o | less
+  521  rm obj/rsp.o
+  522  cd bass
+  523  ./bass.exe sonic.asm 
+  524  xxd --include rsp_code > ../rsp_code.h
+  525  cd ..
+  526  rm obj/rsp.o
+  527  make
+  528  ./usb64-load-game.bat
+  529  mips64-elf-objdump.exe -D obj/rsp.o | less
+  530  make
+  531  ./usb64-load-game.bat
+  532  xxd --include rsp_code > ../rsp_code.h
+  533  mips64-elf-objdump.exe -D obj/rsp.o | less
+  534  rm obj/rsp.o
+  535  cd bass
+  536  ./bass.exe sonic.asm 
+  537  xxd --include rsp_code > ../rsp_code.h
+  538  cd ..
+  539  make
+  540  make
+  541  ./usb64-load-game.bat
+  542  make
+  543  make
+  544  ./usb64-load-game.bat
+  545  make
+  546  ./usb64-load-game.bat
+  547  make
+  548  ./usb64-load-game.bat
+  549  rm obj/rsp.o 
+  550  cd bass/
+  551  ./bass.exe sonic.asm 
+  552  xxd --include rsp_code > ../rsp_code.h
+  553  cd ..
+  554  make
+  555  ./usb64-load-game.bat
+  556  make
+  557  ./usb64-load-game.bat
+  558  mips64-elf-objdump.exe -D obj/rsp.o | less
+  559  make
+  560  ./usb64-load-game.bat
+  561  make
+  562  make
+  563  ./usb64-load-game.bat
+  564  mips64-elf-objdump.exe -D obj/rsp.o | less
+  565  make
+  566  ./usb64-load-game.bat
+  567  rm obj/rsp.o
+  568  ls
+  569  cd bass
+  570  ./bass.exe sonic.asm 
+  571  ./bass.exe sonic.asm 
+  572  xxd --include rsp_code > ../rsp_code.h
+  573  cd ..
+  574  make
+  575  ./usb64-load-game.bat
+  576  make
+  577  ./usb64-load-game.bat
+  578  cd bass
+  579  ./bass.exe sonic.asm 
+  580  cd ..
+  581  cd ba
+  582  cd bass
+  583  xxd --include rsp_code > ../rsp_code.h
+  584  cd ..
+  585  rm obj/rsp.o 
+  586  make
+  587  mips64-elf-objdump.exe -D obj/rsp.o | less
+  588  make
+  589  rm obj/rsp.o
+  590  cd bass
+  591  ls
+  592  ./bass.exe sonic.asm 
+  593  xxd --include rsp_code > ../rsp_code.h
+  594  cd ..
+  595  make
+  596  make
+  597  make
+  598  make
+  599  make
+  600  make
+  601  make
+  602  rm obj/rsp.o
+  603  cd bass
+  604  ./bass.exe sonic.asm 
+  605  xxd --include rsp_code > ../rsp_code.h
+  606  make
+  607  cd ..
+  608  make
+  609  make
+  610  make
+  611  make
+  612  ~make
+  613  make
+  614  make
+  615  cd ../new_libdragon/
+  616  grep -R "register_SP" .
+  617  cd src/
+  618  ls
+  619  nano -w rsp.c 
+  620  make
+  621  cd ../..
+  622  cd genemu64
+  623  make
+  624  nano -w ../new_libdragon/src/rsp.c 
+  625  nano -w ../new_libdragon/src/rsp.c 
+  626  make
+  627  make
+  628  make
+  629  make
+  630  ./usb64-load-game.bat 
+  631  ./usb64-load-game.bat 
+  632  make
+  633  ./usb64-load-game.bat 
+  634  cd bass
+  635  ./bass.exe sonic.asm 
+  636  xxd --include rsp_code > ../rsp_code.h
+  637  cd ..
+  638  rm obj/rsp.o
+  639  make
+  640  make
+  641  ./usb64-load-game.bat 
+  642  rm obj/rsp.o 
+  643  cd bass
+  644  ./bass.exe sonic.asm 
+  645  xxd --include rsp_code > ../rsp_code.h
+  646  cd ..
+  647  make
+  648  ./usb64-load-game.bat 
+  649  make
+  650  ./usb64-load-game.bat 
+  651  make
+  652  make
+  653  rm obj/rsp.o
+  654  cd bass
+  655  ./bass.exe sonic.asm 
+  656  xxd --include rsp_code > ../rsp_code.h
+  657  cd ..
+  658  make
+  659  make
+  660  ./usb64-load-game.bat 
+  661  make
+  662  ./usb64-load-game.bat 
+  663  make
+  664  ./usb64-load-game.bat 
+  665  make
+  666  ./usb64-load-game.bat 
+  667  make
+  668  ./usb64-load-game.bat 
+  669  make
+  670  ./usb64-load-game.bat 
+  671  make
+  672  cd bass
+  673  ./bass.exe sonic.asm 
+  674  xxd --include rsp_code > ../rsp_code.h
+  675  cd ..
+  676  rm obj/rsp.o
+  677  make
+  678  make
+  679  ./usb64-load-game.bat 
+  680  make
+  681  ./usb64-load-game.bat 
+  682  make
+  683  cd bass/
+  684  ./bass.exe sonic.asm 
+  685  xxd --include rsp_code > ../rsp_code.h
+  686  cd ..
+  687  rm obj/rsp.o 
+  688  make
+  689  ./usb64-load-game.bat 
+  690  make
+  691  make
+  692  ./usb64-load-game.bat 
+  693  make
+  694  ./usb64-load-game.bat 
+  695  make
+  696  ./usb64-load-game.bat 
+  697  make
+  698  ./usb64-load-game.bat 
+  699  make
+  700  ./usb64-load-game.bat 
+  701  make
+  702  ./usb64-load-game.bat 
+  703  make
+  704  rm obj/rsp.o 
+  705  cd bass/
+  706  ./bass.exe sonic.asm 
+  707  xxd --include rsp_code > ../rsp_code.h
+  708  cd .
+  709  cd ..
+  710  make
+  711  make
+  712  make
+  713  ./usb64-load-game.bat 
+  714  make
+  715  ./usb64-load-game.bat 
+  716  make
+  717  make
+  718  ./usb64-load-game.bat 
+  719  make
+  720  cd bass
+  721  ./bass.exe sonic.asm 
+  722  xxd --include rsp_code > ../rsp_code.h
+  723  cd ..
+  724  rm obj/rsp.o 
+  725  make
+  726  make
+  727  ./usb64-load-game.bat 
+  728  make
+  729  ./usb64-load-game.bat 
+  730  make
+  731  ./usb64-load-game.bat 
+  732  make
+  733  ./usb64-load-game.bat 
+  734  cd bass
+  735  ./bass.exe sonic.asm 
+  736  xxd --include rsp_code > ../rsp_code.h
+  737  cd ..
+  738  rm obj/rsp.o
+  739  make
+  740  make
+  741  ./usb64-load-game.bat 
+  742  make
+  743  make
+  744  ./usb64-load-game.bat 
+  745  make
+  746  ./usb64-load-game.bat 
+  747  make
+  748  ./usb64-load-game.bat 
+  749  make
+  750  ./usb64-load-game.bat 
+  751  make
+  752  ./usb64-load-game.bat 
+  753  rm filesystem/S1BUILT.BIN 
+  754  cp SONIC2.BIN filesystem/
+  755  rm rom.dfs
+  756  nano main.c 
+  757  make
+  758  ./usb64-load-game.bat 
+  759  nano -w ../new_libdragon/include/rsp.h 
+  760  nano -w ../new_libdragon/include/n64sys.h 
+  761  cd ../new_libdragon/
+  762  grep -R "SET_HALT" 
+  763  grep -R "SET_HALT" .
+  764  grep -R "CLEAR_HALT" .
+  765  grep -R "SET_INTR_BR" .
+  766  cd ../
+  767  cd genemu64
+  768  rm obj/rsp.o 
+  769  cd bass/
+  770  ./bass.exe sonic.asm 
+  771  xxd --include rsp_code > ../rsp_code.h
+  772  cd ..
+  773  make
+  774  make
+  775  ./usb64-load-game.bat 
+  776  make
+  777  make
+  778  ./usb64-load-game.bat 
+  779  make
+  780  make
+  781  make
+  782  ./usb64-load-game.bat 
+  783  rm obj/rsp.o
+  784  cd bass && ./bass.exe sonic.asm
+  785  xxd --include rsp_code > ../rsp_code.h && cd .. && make
+  786  ./usb64-load-game.bat 
+  787  make
+  788  ./usb64-load-game.bat 
+  789  make
+  790  ./usb64-load-game.bat 
+  791  rm obj/rsp.o 
+  792  make
+  793  ./usb64-load-game.bat 
+  794  make
+  795  ./usb64-load-game.bat 
+  796  rm filesystem/SONIC2.BIN 
+  797  rm rom.dfs
+  798  cp S1BUILT.BIN filesystem/
+  799  nano main.c 
+  800  make
+  801  ./usb64-load-game.bat 
+  802  make
+  803  ./usb64-load-game.bat 
+  804  ./usb64-load-game.bat 
+  805  make
+  806  ./usb64-load-game.bat 
+  807  make
+  808  cd bass && ./bass.exe sonic.asm
+  809  xxd --include rsp_code > ../rsp_code.h && cd .. && rm obj/rsp.o && make
+  810  ./usb64-load-game.bat 
+  811  make
+  812  ./usb64-load-game.bat 
+  813  make
+  814  ./usb64-load-game.bat 
+  815  make
+  816  make
+  817  ./usb64-load-game.bat 
+  818  make
+  819  ./usb64-load-game.bat 
+  820  make
+  821  ./usb64-load-game.bat 
+  822  make
+  823  ./usb64-load-game.bat 
+  824  make
+  825  ./usb64-load-game.bat 
+  826  make
+  827  ./usb64-load-game.bat 
+  828  make
+  829  ./usb64-load-game.bat 
+  830  make
+  831  make
+  832  ./usb64-load-game.bat 
+  833  cd m68k
+  834  make
+  835  make
+  836  cp m68k.o ../obj
+  837  cd ..
+  838  rm filesystem/S1BUILT.BIN 
+  839  cp SONIC2.BIN filesystem/
+  840  rm rom.dfs
+  841  make
+  842  rm GENEMU.*
+  843  make
+  844  ./usb64-load-game.bat 
+  845  make
+  846  cd m68k
+  847  make
+  848  cp m68k.o ../obj
+  849  cd ..
+  850  rm vdp.o
+  851  rm obj/vdp.o
+  852  rm obj/rsp.o
+  853  make
+  854  nano main.c 
+  855  make
+  856  ./usb64-load-game.bat 
+  857  make
+  858  ./usb64-load-game.bat 
+  859  cd bass && ./bass.exe sonic.asm
+  860  xxd --include rsp_code > ../rsp_code.h && cd .. && rm obj/rsp.o && make
+  861  ./usb64-load-game.bat 
+  862  rm rom.dfs
+  863  rm filesystem/SONIC2.BIN 
+  864  cp S1BUILT.BIN filesystem/
+  865  make
+  866  rm obj/rsp.o 
+  867  make
+  868  ./usb64-load-game.bat 
+  869  make
+  870  ./usb64-load-game.bat 
+  871  make
+  872  cd bass/
+  873  ./bass.exe combiner.asm 
+  874  ./bass.exe combiner.asm 
+  875  ./bass.exe combiner.asm 
+  876  ./bass.exe combiner.asm 
+  877  ./bass.exe combiner.asm 
+  878  ./bass.exe combiner.asm 
+  879  xxd --include rsp_code > ../rsp_code.h && cd .. && rm obj/rsp.o
+  880  ./bass.exe combiner.asm 
+  881  cd bass
+  882  ./bass.exe combiner.asm 
+  883  xxd --include rsp_code > ../rsp_code.h && cd .. && rm obj/rsp.o
+  884  make
+  885  cd bass
+  886  ./bass.exe combiner.asm 
+  887  xxd --include rsp_code > ../rsp_code.h && cd .. && rm obj/rsp.o
+  888  make
+  889  make
+  890  cd bass
+  891  ./bass.exe combiner.asm 
+  892  ./bass.exe combiner.asm 
+  893  ./bass.exe combiner.asm 
+  894  xxd --include rsp_code > ../rsp_code.h && cd .. && rm obj/rsp.o
+  895  ls
+  896  make
+  897  make
+  898  cd bass
+  899  ./bass.exe combiner.asm 
+  900  xxd --include rsp_code > ../rsp_code.h && cd .. && rm obj/rsp.o
+  901  make
+  902  make
+  903  cd bass
+  904  ./bass.exe combiner.asm 
+  905  xxd --include rsp_code > ../rsp_code.h && cd .. && rm obj/rsp.o
+  906  make
+  907  cd bass
+  908  ./bass.exe combiner.asm 
+  909  xxd --include rsp_code > ../rsp_code.h && cd .. && rm obj/rsp.o
+  910  make
+  911  make
+  912  ./bass.exe combiner.asm 
+  913  cd bass
+  914  ./bass.exe combiner.asm 
+  915  xxd --include rsp_code > ../rsp_code.h && cd .. && rm obj/rsp.o
+  916  make
+  917  make
+  918  make
+  919  cd bass
+  920  ./bass.exe combiner.asm 
+  921  xxd --include rsp_code > ../rsp_code.h && cd .. && rm obj/rsp.o
+  922  make
+  923  make
+  924  make
+  925  cd bass
+  926  ./bass.exe combiner.asm 
+  927  xxd --include rsp_code > ../rsp_code.h && cd .. && rm obj/rsp.o
+  928  make
+  929  make
+  930  cd bass
+  931  ./bass.exe combiner.asm 
+  932  xxd --include rsp_code > ../rsp_code.h && cd .. && rm obj/rsp.o
+  933  make
+  934  cd bass
+  935  ./bass.exe combiner.asm 
+  936  xxd --include rsp_code > ../rsp_code.h && cd .. && rm obj/rsp.o
+  937  cd bass
+  938  ./bass.exe combiner.asm 
+  939  xxd --include rsp_code > ../rsp_code.h && cd .. && rm obj/rsp.o
+  940  make
+  941  make
+  942  make
+  943  cd bass
+  944  ./bass.exe combiner.asm 
+  945  xxd --include rsp_code > ../rsp_code.h && cd .. && rm obj/rsp.o
+  946  make
+  947  cd bass
+  948  ./bass.exe combiner.asm 
+  949  xxd --include rsp_code > ../rsp_code.h && cd .. && rm obj/rsp.o
+  950  make
+  951  cd bass
+  952  ./bass.exe combiner.asm 
+  953  xxd --include rsp_code > ../rsp_code.h && cd .. && rm obj/rsp.o
+  954  make
+  955  make
+  956  cd bass
+  957  ./bass.exe combiner.asm 
+  958  xxd --include rsp_code > ../rsp_code.h && cd .. && rm obj/rsp.o
+  959  make
+  960  cd bass
+  961  ./bass.exe combiner.asm 
+  962  make
+  963  ./bass.exe combiner.asm 
+  964  xxd --include rsp_code > ../rsp_code.h && cd .. && rm obj/rsp.o
+  965  make
+  966  make
+  967  cd bass
+  968  ./bass.exe combiner.asm 
+  969  xxd --include rsp_code > ../rsp_code.h && cd .. && rm obj/rsp.o
+  970  make
+  971  make
+  972  make
+  973  make
+  974  cd bass
+  975  ./bass.exe combiner.asm 
+  976  xxd --include rsp_code > ../rsp_code.h && cd .. && rm obj/rsp.o
+  977  make
+  978  ./usb64-load-game.bat 
+  979  make
+  980  cd bass
+  981  ./bass.exe combiner.asm 
+  982  xxd --include rsp_code > ../rsp_code.h && cd .. && rm obj/rsp.o
+  983  make
+  984  ./usb64-load-game.bat 
+  985  make
+  986  make
+  987  ./usb64-load-game.bat 
+  988  make
+  989  ./usb64-load-game.bat 
+  990  make
+  991  make
+  992  ./usb64-load-game.bat 
+  993  make
+  994  ./usb64-load-game.bat 
+  995  cd bass
+  996  ./bass.exe combiner.asm 
+  997  xxd --include rsp_code > ../rsp_code.h && cd .. && rm obj/rsp.o
+  998  make
+  999  ./usb64-load-game.bat 
+ 1000  cd bass
+ 1001  ./bass.exe combiner.asm 
+ 1002  xxd --include rsp_code > ../rsp_code.h && cd .. && rm obj/rsp.o
+ 1003  make
+ 1004  ./usb64-load-game.bat 
+ 1005  make
+ 1006  ./usb64-load-game.bat 
+ 1007  cd bass
+ 1008  ./bass.exe combiner.asm 
+ 1009  xxd --include rsp_code > ../rsp_code.h && cd .. && rm obj/rsp.o
+ 1010  make
+ 1011  ./usb64-load-game.bat 
+ 1012  ./usb64-load-game.bat 
+ 1013  make
+ 1014  ./usb64-load-game.bat 
+ 1015  history > history_for_building_genemu

@@ -1,0 +1,80 @@
+// offsets for new rsp code
+constant fb_width = 320
+constant tile_width = 32
+
+constant framebuffer = 0
+//constant start_x = 4
+//constant start_y = 8
+
+constant dram_addr00 = 12
+constant palnum00 = 16
+constant vf00 = 20
+constant hf00 = 24
+
+constant dram_addr01 = 28
+constant palnum01 = 32
+constant vf01 = 36
+constant hf01 = 40
+
+constant dram_addr10 = 44
+constant palnum10 = 48
+constant vf10 = 52
+constant hf10 = 56
+
+constant dram_addr11 = 60
+constant palnum11 = 64
+constant vf11 = 68
+constant hf11 = 72
+
+constant dram_addr20 = 76
+constant palnum20 = 80
+constant vf20 = 84
+constant hf20 = 88
+
+constant dram_addr21 = 92
+constant palnum21 = 96
+constant vf21 = 100
+constant hf21 = 104
+
+constant dram_addr30 = 108
+constant palnum30 = 112
+constant vf30 = 116
+constant hf30 = 120
+
+constant dram_addr31 = 124
+constant palnum31 = 128
+constant vf31 = 132
+constant hf31 = 136
+
+constant dmem00 = 256
+constant dmem01 = 288
+constant dmem10 = 320
+constant dmem11 = 352
+constant dmem20 = 384
+constant dmem21 = 416
+constant dmem30 = 448
+constant dmem31 = 480
+// ends at 511
+
+constant combined_8 = 512
+
+constant combined_16 = 1024
+
+constant tlut = 2048
+
+// if we keep a one-dimensional index
+// framebuffer y = (i/40)<<3
+// framebuffer x = (i%40)<<3
+
+// pseudocode
+// copy tile 00
+// copy tile 01
+// combine to 8bpp
+// do color lookup and write 16 bit pixels
+// to combined_16 + (((y*32)+x)<<1)
+
+// repeat for tiles 10,11
+
+// repeat for tiles 20,21
+
+// repeat for tiles 30,31

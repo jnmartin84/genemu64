@@ -1,0 +1,124 @@
+void vdp_render_sprites_alternate(int line, int priority)
+{
+	uint8_t pixel;
+	uint16_t *pal;
+	uint32_t data;
+	uint32_t spr_ent_bot,spr_ent_top;
+	uint32_t c=0, cells=64, i=0, j, k, h, sp, sl, sh, sv, sn, sc, shf, svf;
+	uint32_t ty;
+	uint32_t byte_offset; // this is for the vertical tile row to read from
+	sint32_t sx, sy;
+	uint64_t spr_ent;
+
+	c = 0;
+	cells = 64;
+	i = 0;
+
+	if (!(vdp.dis_cells == 32))
+	{
+		cells = 80;
+	}
+
+	for(i=0;i<cells;i++)
+	{
+		spr_ent = vdp.sat[c];
+
+		spr_ent_top = (spr_ent >> 32);
+		spr_ent_bot = (spr_ent & 0x00000000ffffffff);
+
+		sy = ((spr_ent_top & 0x03FF0000) >> 16)-128;
+		sh = ((spr_ent_top & 0x00000C00) >> 10)+1;
+		sv = ((spr_ent_top & 0x00000300) >> 8)+1;
+
+		if((line >= sy) && (line < (sy+(sv<<3))))
+		{
+			sp = (spr_ent_bot & 0x80000000) >> 31;
+
+			if(sp == priority)
+			{
+				svf = (spr_ent_bot & 0x10000000) >> 28;
+
+				if(svf)
+				{
+					ty = ((sv<<3) - 1) - (line - sy);
+					k = ty % 8;
+					byte_offset = ((sv-1)<<5) - ((ty<<2) & 224);
+				}
+				else
+				{
+					ty = line - sy;
+					k = ty % 8;
+					byte_offset = (ty<<2) & 224;
+				}
+
+				shf = (spr_ent_bot & 0x08000000) >> 27;
+				sn = (spr_ent_bot & 0x07FF0000) >> 11;
+				sx = (spr_ent_bot & 0x000003FF)-128;
+
+				sc = (spr_ent_bot & 0x60000000) >> 29;
+				pal = vdp.dc_cram + (sc << 4);
+
+				for(h = 0; h < sh; ++h)
+				{
+					if(svf)
+					{
+						if(shf)
+						{
+							data = *(uint32_t *)(spr_start + byte_offset + ((sv*(sh-h-1))<<5) + (28-(k<<2)));
+						}
+						else
+						{
+							data = *(uint32_t *)(spr_start + byte_offset + ((sv*h)<<5) + (28-(k<<2)));
+						}
+					}
+					else
+					{
+						if(shf)
+						{
+							data = *(uint32_t *)(spr_start + byte_offset + ((sv*(sh-h-1))<<5) + (k<<2));
+						}
+						else
+						{
+							data = *(uint32_t *)(spr_start + byte_offset + ((sv*h)<<5) + (k<<2));
+						}
+					}
+
+					if (shf)
+					{
+						for(j=0;j<8;j++)
+						{
+							pixel = data & 0x0f;
+							data >>= 4;
+							if (pixel)
+							{
+								ocr_vram[sx + j + (h<<3)] = pal[pixel];
+							}
+						}
+					}
+					else
+					{
+						for(j=0;j<8;j++)
+						{
+							pixel = data >> 28;
+							data <<= 4;
+							if (pixel)
+							{
+								ocr_vram[sx + j + (h<<3)] = pal[pixel];
+							}
+						}
+					}
+				}
+			}
+		}
+
+		sl = (spr_ent_top & 0x0000007F);
+		if(sl)
+		{
+			c = sl;
+		}
+		else
+		{
+			break;
+		}
+	}
+}

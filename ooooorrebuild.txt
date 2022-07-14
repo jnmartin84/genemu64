@@ -1,0 +1,9 @@
+#!/bin/sh
+cd /home/jason/n64dev/genemu64
+rm ./obj/rsp.o
+rm ./rsp_code.h
+cd ./bass
+./bass.exe ./combiner.asm
+xxd --include ./rsp_code > ./../rsp_code.h
+cd ./..
+make
